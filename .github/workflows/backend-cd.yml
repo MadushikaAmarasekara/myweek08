@@ -6,15 +6,18 @@ on:
       aks_cluster_name:
         description: 'Name of the AKS Cluster to deploy to'
         required: true
-        default: '<aks_cluster_name>'
+        default: 'mywk8aks'
       aks_resource_group:
         description: 'Resource Group of the AKS Cluster'
         required: true
-        default: '<resource_group_name>'
+        default: 'ci-wk8-rg'
       aks_acr_name:
         description: 'Name of ACR'
         required: true
-        default: '<acr_name>'
+        default: 'mywk8acr'
+  workflow_run:
+    workflows: ["Backend CI - Test, Build and Push Images to ACR"]
+    types: [completed]
 
 jobs:
   deploy_backend:
