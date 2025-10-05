@@ -1,5 +1,5 @@
 # week08/.github/workflows/backend_ci.yml
-# Comment added to trigger backend CI workflow by Madushika Amarasekara
+# Comment added to trigger backend CI workflow - Madushika Amarasekara
 
 name: Backend CI - Test, Build and Push Images to ACR
 
