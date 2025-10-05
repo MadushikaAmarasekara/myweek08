@@ -17,7 +17,7 @@ on:
         default: 'mywk8acr'
   workflow_run:
     workflows: ["Backend CI - Test, Build and Push Images to ACR"]
-    types: [completed]
+    types: [completed, success]
 
 jobs:
   deploy_backend:
