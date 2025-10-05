@@ -9,10 +9,6 @@ on:
   # Manual trigger
   workflow_dispatch:
 
-  workflow_run:
-    workflows: ["Backend CI - Test, Build and Push Images to ACR"]
-    types: [completed]
-
   # Automatically on pushes to main branch
   push:
     branches:
