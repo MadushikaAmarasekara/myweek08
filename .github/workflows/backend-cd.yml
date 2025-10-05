@@ -17,10 +17,11 @@ on:
         default: 'mywk8acr'
   workflow_run:
     workflows: ["Backend CI - Test, Build and Push Images to ACR"]
-    types: [completed, success]
+    types: [completed]
 
 jobs:
   deploy_backend:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment: Production
     
